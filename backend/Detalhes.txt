@@ -1,3 +1,8 @@
+Instalar :
+    -chocolatey
+    -node js
+    -yarn
+
 O arquivo json é importante pois nele são mantidas as informacoes dos pacotes de extensoes usadas
 
 - O primeiro pacote de extensao instalado foi o express
@@ -19,4 +24,11 @@ fazer com que o servidor se reinicie todas as vezes que hover mudanca em algum d
   > seguir instrucoes do site do banco de dados
   yarn add mongoose > ODM: Ferramenta para trabalhar em banco de dados utilizando somente
   JS.
-  
+  > https://cloud.mongodb.com/v2/5d49db8b553855111e54e521#clusters
+  > vizualizar banco de dados com mongoDB compassa community
+
+
+- Utilizando Pacote axios, para extrair dados  (fazer requisicoes) de uma API, neste caso sera
+ a do git hub
+  yarn add axios
+
