@@ -32,3 +32,5 @@ fazer com que o servidor se reinicie todas as vezes que hover mudanca em algum d
  a do git hub
   yarn add axios
 
+- Utilizando pacote cors para permitir que a aplicacao possa ser acessada por qualque endereco
+ou seja, o react vai poder acessar a aplicacao.

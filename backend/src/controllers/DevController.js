@@ -3,6 +3,19 @@ const axios = require('axios');  //Pacote para requisicao de dados de API's
 const Dev = require('../models/Dev');
 
 module.exports = {
+    async index(req, res){
+        const { user } = req.headers;  // buscando o user no header
+        const loggedUser = await Dev.findById(user); // guarda todas as infos do user no logged user
+        const users = await Dev.find({
+            $and: [
+                { _id: { $ne: user } },
+                { _id: { $nin: loggedUser.likes } },
+                { _id: { $nin: loggedUser.dislikes } },
+            ]
+        })
+        return res.json(users);
+    },
+
     async store(req, res) { //para se utilizar o await é necessario informar que a funcao é assincorina com async
         const { username } = req.body;  // Desestrutura e permite a utilizacao do username na funcao store, ao inves de fazer req.body.username
         

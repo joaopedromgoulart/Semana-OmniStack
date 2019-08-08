@@ -14,6 +14,14 @@ const DevSchema = new Schema({
         type: String,
         required: true,
     },
+    likes : [{
+        type: Schema.Types.ObjectId,
+        ref: 'Dev',
+    }],
+    dislikes: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Dev',
+    }],
 }, {
     timestamps: true,  // Cria uma coluna (createdAt) em cada registro de desenvolvedor salvo, armazenando a data de criacao e uma coluna (updatedAt) que registra datas de alteraçoes
 });
