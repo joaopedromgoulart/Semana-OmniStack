@@ -1,0 +1,48 @@
+﻿------------------------------------->BackEnd<-----------------------------------
+Instalar :
+    -chocolatey
+    -node js
+    -yarn
+
+O arquivo json é importante pois nele são mantidas as informacoes dos pacotes de extensoes usadas
+
+- O primeiro pacote de extensao instalado foi o express
+    yarn add express > é um micro framework para o node que ajuda a lidar com rotas, tanto a parte 
+    de requisisoes e respostas do servidor
+    > exemplo wwww.minhaaplicacao.com/users > retornar os ususarios
+    >         wwww.minhaaplicacao.com/products > retornar os produtos
+    >         wwww.minhaaplicacao.com/products/1 > retornar produto com ID 1
+
+- O arquivo yarn.lock é um arquivo de cache que armazena as dependencias das dependencias
+    > Isso acontece porque o pacote express que foi instalado tambem tem algumas dependencias, e o yarn
+    identifica estas dependencias e tambem às instala. Pode acontecer tambem de as dependencias do express
+    tambem conterem outras dependencias, que tambem serao instaladas.
+
+- yarn add nodemon -D > utilizando este comando e criando um script em package.json foi possivel 
+fazer com que o servidor se reinicie todas as vezes que hover mudanca em algum dos documentos.
+
+- Utilizacao do banco de dados mongoDB Atlas
+  > seguir instrucoes do site do banco de dados
+  yarn add mongoose > ODM: Ferramenta para trabalhar em banco de dados utilizando somente
+  JS.
+  > https://cloud.mongodb.com/v2/5d49db8b553855111e54e521#clusters
+  > vizualizar banco de dados com mongoDB compassa community
+
+
+- Utilizando Pacote axios, para extrair dados  (fazer requisicoes) de uma API, neste caso sera
+ a do git hub
+  yarn add axios
+
+- Utilizando pacote cors para permitir que a aplicacao possa ser acessada por qualque endereco
+ou seja, o react vai poder acessar a aplicacao.
+
+---------------------------------->INTERFACE WEB<-------------------------------
+
+- Criar um projeto react dentro da maquina utilizando o pacote creat react app (do facabook) que ja deixa o projeto com algumas pre-configuraçoes (webpack, babel)
+    yarn create react-app nome_da_aplicacao
+	> O react é utilizado para construcao de interfaces e aplicacao visual
+
+-Criando um sistema de roteamento para controlar as paginas dentro do react:
+    yarn add react-router-dom
+
+- Istalar axio > explicacao na parte do backend
